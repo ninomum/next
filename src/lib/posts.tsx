@@ -13,3 +13,12 @@ export async function getPosts(): Promise<PostType[]> {
         }, 500);
     });
 }
+
+export async function getPostById(id: number): Promise<PostType | undefined> {
+    // 模拟异步获取单篇文章
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(posts.find((post) => post.id === id));
+        }, 500);
+    });
+}
