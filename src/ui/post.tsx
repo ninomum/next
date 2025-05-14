@@ -1,11 +1,15 @@
-import { PostType } from '@/types/post'
+import { PostType } from '@/types/post';
+import '@/styles/globals.scss';
 
 export function Post({ post }: { post: PostType }) {
     return (
-        <li>
-            <h2>{post.id}</h2>
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
+        <li className="postItem">
+            <article className="postCard">
+                <header>
+                    <h2 className="postTitle">{post.title}</h2>
+                </header>
+                <p className="postContent">{post.content}</p>
+            </article>
         </li>
     );
 }

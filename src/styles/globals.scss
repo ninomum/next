@@ -1,0 +1,23 @@
+.postItem {
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.postCard {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #f9f9f9;
+}
+
+.postTitle {
+    margin: 0 0 8px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.postContent {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+}
