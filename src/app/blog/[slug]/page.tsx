@@ -1,14 +1,14 @@
-import { getPosts } from '@/lib/posts'
+import { getPostById } from '@/lib/posts'
 import { Post } from '@/ui/post'
 
-export default async function Page() {
-  const posts = await getPosts()
+export default async function Page({ params }: { params: { slug: string } }) {
+  const postId = parseInt(params.slug, 10);
+  const post = await getPostById(postId);
 
   return (
-    <ul>
-      {posts.map((post) => (
-        <Post key={post.id} post={post} />
-      ))}
-    </ul>
+    <article>
+      <h1>{post?.title}</h1>
+      <div>{post?.content}</div>
+    </article>
   )
 }
