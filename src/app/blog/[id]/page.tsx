@@ -1,8 +1,7 @@
 import { getPostById } from '@/lib/posts'
-import { Post } from '@/ui/post'
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const postId = parseInt(params.slug, 10);
+export default async function Page({ params }: { params: { id: string } }) {
+  const postId = parseInt(params.id, 10);
   const post = await getPostById(postId);
 
   return (
