@@ -13,6 +13,9 @@ export function Post({ post }: { post: PostType }) {
                     <p className="postContent">{post.content}</p>
                 </article>
             </Link >
+            <Link href={`/blog/${post.id}/edit`}>
+                <button className="editButton">Edit</button>
+            </Link>
         </li >
     );
 }
