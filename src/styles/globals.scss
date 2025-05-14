@@ -4,11 +4,15 @@
 }
 
 .postCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 16px;
     background-color: #e7e3f8;
 }
+
 
 .postTitle {
     margin: 0 0 8px;
@@ -20,4 +24,9 @@
     margin: 0;
     font-size: 1rem;
     color: #555;
+}
+
+.postActions {
+    display: flex;
+    gap: 8px;
 }
