@@ -1,4 +1,11 @@
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'nino',
+  description: 'nino1213',
+}
+
 export default function Page() {
   return (
     <div>
