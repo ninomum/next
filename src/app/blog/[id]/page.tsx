@@ -1,7 +1,8 @@
 import { getPostById } from '@/lib/posts'
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const postId = parseInt(params.id, 10);
+export default async function Page({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const postId = parseInt(id, 10);
   const post = await getPostById(postId);
 
   return (
