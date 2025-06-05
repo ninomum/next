@@ -1,7 +1,7 @@
 import { getPosts } from '@/lib/posts'
 import { Post } from '@/ui/post'
 import { PostType } from '@/types/post'
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
